@@ -1,0 +1,15 @@
+.my-text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.vl {
+    border-left: 1px solid grey;
+    height: 723px;
+    margin-left: 10px;
+}
+
+.my-text-align {
+    text-align: center;
+}
