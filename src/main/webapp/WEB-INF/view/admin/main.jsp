@@ -7,7 +7,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="card" style="height: 400px; width: 350px; margin: auto; margin-top: 40px;">
-                        <div class="card-header" style="background-color: #8e928f;">
+                        <div class="card-header" style="background-color: #bfc2c0;">
                             <h3 class="text-center">관리</h3>
                         </div>
                         <div class="card-body">

@@ -47,7 +47,6 @@ public class EtcController {
             String keyword,
             @PageableDefault(page = 0, size = 5, sort = "id", direction = Sort.Direction.ASC) Pageable pageable,
             Model model) {
-        System.out.println("테스트 : " + keyword);
         Page<User> users;
         if (keyword != null && !keyword.isEmpty()) {
             users = userService.getUserListByEmailContaining(keyword, pageable);
@@ -56,8 +55,8 @@ public class EtcController {
         }
 
         int nowPage = users.getPageable().getPageNumber() + 1;
-        int startPage = Math.max(nowPage - 4, 1); // 버튼에서 첫 숫자
-        int endPage = Math.min(nowPage + 5, users.getTotalPages()); // 버튼에서 마지막 숫자
+        int startPage = ((nowPage - 1) / 5) * 5 + 1; // 버튼에서 첫 숫자
+        int endPage = Math.min(startPage + 4, users.getTotalPages()); // 버튼에서 마지막 숫자
 
         model.addAttribute("userList", users.getContent());
         model.addAttribute("nowPage", nowPage);
